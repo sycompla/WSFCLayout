@@ -1,0 +1,44 @@
+<mvc:View
+        controllerName="sources.controllers.Master"
+        xmlns="sap.m"
+        xmlns:f="sap.f"
+        xmlns:mvc="sap.ui.core.mvc">
+    <f:DynamicPage id="dynamicPageId" toggleHeaderOnTitleClick="false">
+        <!-- DynamicPage Title -->
+        <f:title>
+            <f:DynamicPageTitle>
+            </f:DynamicPageTitle>
+        </f:title>
+
+        <!-- DynamicPage Content -->
+        <f:content>
+            <Table id="MyCarsTable"
+                   growing="true"
+                   growingThreshold="10"
+                   items="{/data}">
+                <headerToolbar>
+                 </headerToolbar>
+                <columns>
+                    <Column>
+                        <Text text="Service" />
+                    </Column>
+                    <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Text text="Result" />
+                    </Column>
+                    <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Text text="ResultMessage" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem type="Detail" detailPress="onListItemPress">
+                        <cells>
+                            <ObjectIdentifier title="{service}" />
+                            <Label id="resultId" text="{result}"/>
+                            <Label id="resultMessageId" text="{resultMessage}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>
