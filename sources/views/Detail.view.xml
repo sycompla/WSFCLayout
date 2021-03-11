@@ -2,7 +2,8 @@
         controllerName="sources.controllers.Detail"
         xmlns="sap.m"
         xmlns:f="sap.f"
-        xmlns:mvc="sap.ui.core.mvc">
+        xmlns:mvc="sap.ui.core.mvc"
+        id="detail">
     <f:DynamicPage id="dynamicPageId" toggleHeaderOnTitleClick="false">
         <!-- DynamicPage Title -->
         <f:title>

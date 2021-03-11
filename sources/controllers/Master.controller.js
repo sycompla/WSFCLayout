@@ -32,7 +32,15 @@ sap.ui.define([
 			oFCL.setLayout(fioriLibrary.LayoutType.TwoColumnsMidExpanded);
 			var bindingContext = event.getSource().getBindingContext();
 			var recordId = bindingContext.getProperty("threadId");
-			console.log(recordId);
+			console.log(bindingContext);
+
+			var oView = sap.ui.getCore().byId("idDetail");
+			console.log(oView)
+
+			/* itt fogom átadni a kiválasztott sor objektumát
+				a következő nézetnek, ami igy majd azt az 1
+				objektumot fogja megjeleniteni részleteiben.
+			 */
 		}
 	});
 });
